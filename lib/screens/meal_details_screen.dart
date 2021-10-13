@@ -15,6 +15,7 @@ class MealDetailScreen extends StatelessWidget {
   Widget _createSectionContainer(Widget child) {
     return Container(
       width: 350,
+      height: 250,
       padding: EdgeInsets.all(10),
       margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
@@ -67,24 +68,32 @@ class MealDetailScreen extends StatelessWidget {
               ),
             ),
             _createSectionTitle(context, 'Passos'),
-            _createSectionContainer(ListView.builder(
-              itemCount: meal.steps.length,
-              itemBuilder: (ctx, index) {
-                return Column(
-                  children: [
-                    ListTile(
-                      leading: CircleAvatar(
-                        child: Text('${index + 1}'),
+            _createSectionContainer(
+              ListView.builder(
+                itemCount: meal.steps.length,
+                itemBuilder: (ctx, index) {
+                  return Column(
+                    children: [
+                      ListTile(
+                        leading: CircleAvatar(
+                          child: Text('${index + 1}'),
+                        ),
+                        title: Text(meal.steps[index]),
                       ),
-                      title: Text(meal.steps[index]),
-                    ),
-                    Divider(),
-                  ],
-                );
-              },
-            ))
+                      Divider(),
+                    ],
+                  );
+                },
+              ),
+            )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.star),
+        onPressed: () {
+          Navigator.of(context).pop(meal.title);
+        },
       ),
     );
   }
