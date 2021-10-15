@@ -1,16 +1,10 @@
-# meals
+# Meals
 
-A new Flutter project.
+Esse projeto consiste em uma aplicação desenvolvida em Flutter para trazer ao usuário receitas, permitindo-o filtrar as receitas sem Glútem, sem Lactose, Veganas e Vegetarianas, favoritar receitas entre outras funções.
 
-## Getting Started
+## Aprendizado
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Navegação entre telas em Stack
+* Navegação entre telas por meio de TabBar
+* Mudança de estado sendo passadas entre componentes
+* Criação de modelos
