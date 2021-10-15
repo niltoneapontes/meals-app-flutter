@@ -22,24 +22,11 @@ class CategoriesMealsScreen extends StatelessWidget {
         title: Text(category.title),
       ),
       body: Center(
-        child: categoryMeals.length == 0
-            ? Center(
-                child: Container(
-                  padding: EdgeInsets.all(30),
-                  child: Text(
-                    'Não há refeições disponíveis 😥',
-                    style: TextStyle(
-                      fontSize: 24,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              )
-            : ListView.builder(
-                itemCount: categoryMeals.length,
-                itemBuilder: (ctx, index) {
-                  return MealItem(categoryMeals[index]);
-                }),
+        child: ListView.builder(
+            itemCount: categoryMeals.length,
+            itemBuilder: (ctx, index) {
+              return MealItem(categoryMeals[index]);
+            }),
       ),
     );
   }
